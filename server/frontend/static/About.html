@@ -1,11 +1,35 @@
 <html>
 <head>
-  <!-- Link the style sheet here -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    /* Custom styling for a modern look */
+    .team-card {
+      width: 30%;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+    .card-img-top {
+      object-fit: cover; 
+      height: 250px; 
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .text-muted {
+      color: #6c757d;
+      font-weight: 600;
+    }
+  </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2C3E50; height: 1in;">
     <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <h2 style="padding-right: 5%; color: white;">Dealerships</h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,44 +49,47 @@
     </div>
   </nav>
   
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
-    </div>
-    </div>
+  <div class="card" style="width: 85%; margin: auto; margin-top: 4%; border: none;">
+    <div class="banner text-center" name="about-header" style="margin-bottom: 30px;">
+      <h1 style="color: #2C3E50; font-weight: bold;">About Us</h1>
+      <p style="font-size: 1.1em; max-width: 800px; margin: auto; color: #555;">
+        Welcome to Best Cars dealership, home to the best cars in North America. We deal in selling premium domestic and imported vehicles at transparent, highly competitive prices.
+      </p>
     </div>
     
-</div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; margin: auto; width: 100%;">
+      
+      <div class="card team-card">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Jane Doe">
+        <div class="card-body">
+          <h4 class="title">Jane Doe</h4>
+          <p class="text-muted">Dealership Director</p>
+          <p class="card-text">Jane has over 15 years of experience in the auto industry, ensuring we only stock the highest quality vehicles for our customers.</p>
+          <a href="mailto:jane.doe@bestcars.com" style="text-decoration: none; color: #2C3E50;">jane.doe@bestcars.com</a>
+        </div>
+      </div>
 
+      <div class="card team-card">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Marcus Johnson">
+        <div class="card-body">
+          <h4 class="title">Marcus Johnson</h4>
+          <p class="text-muted">Lead Automotive Consultant</p>
+          <p class="card-text">Marcus specializes in matching families with the perfect SUVs and has a deep knowledge of the latest electric vehicle technologies.</p>
+          <a href="mailto:marcus.j@bestcars.com" style="text-decoration: none; color: #2C3E50;">marcus.j@bestcars.com</a>
+        </div>
+      </div>
+
+      <div class="card team-card">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Alex Tran">
+        <div class="card-body">
+          <h4 class="title">Alex Tran</h4>
+          <p class="text-muted">Lead Systems Engineer</p>
+          <p class="card-text">Alex keeps our digital operations running flawlessly and recently migrated our entire backend inventory system to Gemma 4 architecture.</p>
+          <a href="mailto:alex.tran@bestcars.com" style="text-decoration: none; color: #2C3E50;">alex.tran@bestcars.com</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
 </html>
